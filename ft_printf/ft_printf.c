@@ -6,7 +6,7 @@
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 10:35:05 by eerika            #+#    #+#             */
-/*   Updated: 2021/02/07 18:41:14 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/11 16:38:43 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,11 @@ int			ft_treat_save(const char *save, va_list args)
 		{
 			i = ft_flag_parse(save, ++i, &flags, args);
 			if (ft_is_in_type_list(save[i]))
-				char_count += ft_treatment((char)flags.type, flags, args);
-			else if (save[i])
-				char_count += ft_putchar(save[i]);
+				char_count += ft_treatment(flags.type, flags, args);
+			// else if (save[i])
+			// 	char_count += ft_putchar(save[i]);
 		}
-		else if (save[i] != '%')
+		else //if (save[i] != '%')
 			char_count += ft_putchar(save[i]);
 		i++;
 	}
@@ -89,10 +89,13 @@ int			ft_printf(const char *input, ...)
 	save = ft_strdup(input);
 	char_count = 0;
 	va_start(args, input);
-	char_count += ft_treat_save(save, args);
+	char_count = ft_treat_save(save, args);
 	va_end(args);
 	free((char *)save);
 	return (char_count);
 }
 
-
+// int main()
+// {
+// 	ft_printf("%12d", 124);
+// }

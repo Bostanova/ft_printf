@@ -6,7 +6,7 @@
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 10:40:03 by eerika            #+#    #+#             */
-/*   Updated: 2021/02/07 18:24:17 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/11 20:19:31 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int					ft_printf(const char *str, ...);
 int					ft_is_in_type_list(int c);
 int					ft_is_in_flags_list(int c);
 int					ft_treatment(int c, t_flags flags, va_list args);
-int					ft_treat_width(int width, int minus, int has_zero);
+int					ft_width(int width, int minus, int zero);
 int					ft_putstrprec(char *str, int prec);
 int					ft_treat_char(char c, t_flags flags);
 int					ft_treat_string(char *str, t_flags flags);
@@ -53,4 +53,3 @@ t_flags				ft_flag_width(va_list args, t_flags flags);
 t_flags				ft_flag_digit(char c, t_flags flags);
 
 #endif
-

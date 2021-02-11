@@ -6,13 +6,14 @@
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 19:18:09 by eerika            #+#    #+#             */
-/*   Updated: 2021/02/07 18:20:33 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/10 14:06:40 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static char	*treat_base(unsigned long long ull_save, int base, char *rtn, int count)
+static char	*treat_base(unsigned long long ull_save, int base, char *rtn,
+						int count)
 {
 	while (ull_save != 0)
 	{

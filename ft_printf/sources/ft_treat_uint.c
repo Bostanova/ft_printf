@@ -6,7 +6,7 @@
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 19:12:58 by eerika            #+#    #+#             */
-/*   Updated: 2021/02/07 18:02:19 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/11 20:24:45 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	ft_in_put_part_uint(char *unsi_int, t_flags flags)
 
 	char_count = 0;
 	if (flags.dot >= 0)
-		char_count += ft_treat_width(flags.dot - 1, ft_strlen(unsi_int) - 1, 1);
+		char_count += ft_width(flags.dot - 1, ft_strlen(unsi_int) - 1, 1);
 	char_count += ft_putstrprec(unsi_int, ft_strlen(unsi_int));
 	return (char_count);
 }
@@ -35,10 +35,10 @@ static int	ft_put_part_uint(char *unsi_int, t_flags flags)
 	if (flags.dot >= 0)
 	{
 		flags.width -= flags.dot;
-		char_count += ft_treat_width(flags.width, 0, 0);
+		char_count += ft_width(flags.width, 0, 0);
 	}
 	else
-		char_count += ft_treat_width(flags.width,
+		char_count += ft_width(flags.width,
 		ft_strlen(unsi_int), flags.zero);
 	if (flags.minus == 0)
 		char_count += ft_in_put_part_uint(unsi_int, flags);
@@ -55,7 +55,7 @@ int			ft_treat_uint(unsigned int unsi, t_flags flags)
 				+ unsi);
 	if (flags.dot == 0 && unsi == 0)
 	{
-		char_count += ft_treat_width(flags.width, 0, 0);
+		char_count += ft_width(flags.width, 0, 0);
 		return (char_count);
 	}
 	unsi_int = ft_u_itoa(unsi);

@@ -6,7 +6,7 @@
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 19:15:00 by eerika            #+#    #+#             */
-/*   Updated: 2021/02/07 18:20:05 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/11 20:22:48 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,22 @@
 
 int		ft_is_in_type_list(int c)
 {
-	return ((c == 'c') || (c == 's') || (c == 'p') || (c == 'd') || (c == 'i')
-			|| (c == 'u') || (c == 'x') || (c == 'X') || (c == '%'));
+	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i'
+			|| c == 'u' || c == 'x' || c == 'X' || c == '%')
+		return (1);
+	else
+		return (0);
+	// return ((c == 'c') || (c == 's') || (c == 'p') || (c == 'd') || (c == 'i')
+	// 		|| (c == 'u') || (c == 'x') || (c == 'X') || (c == '%'));
 }
 
 int		ft_is_in_flags_list(int c)
 {
-	return ((c == '-') || (c == ' ') || (c == '0') || (c == '.') || (c == '*'));
+	if (c == '-' || c == '0' || c == '.' || c == '*')
+		return (1);
+	else
+		return (0);
+	// return ((c == '-') || (c == '0') || (c == '.') || (c == '*'));
 }
 
 int		ft_treatment(int c, t_flags flags, va_list args)

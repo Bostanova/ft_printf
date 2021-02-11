@@ -6,7 +6,7 @@
 #    By: eerika <eerika@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/29 20:37:59 by eerika            #+#    #+#              #
-#    Updated: 2021/02/07 18:28:51 by eerika           ###   ########.fr        #
+#    Updated: 2021/02/11 20:19:56 by eerika           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ NAME = libftprintf.a
 
 SRCS =  ft_printf.c \
 		sources/ft_treatment.c \
-		sources/ft_treat_width.c \
+		sources/ft_width.c \
 		sources/ft_u_itoa.c \
 		sources/ft_ull_base.c \
 		sources/ft_putchar.c \
@@ -35,7 +35,7 @@ SRCS =  ft_printf.c \
 		
 SURPL_O = 	ft_treat_width.o \
 			ft_treatment.o \
-			ft_treat_width.o \
+			ft_width.o \
 			ft_u_itoa.o \
 			ft_ull_base.o \
 			ft_putchar.o \

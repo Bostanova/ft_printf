@@ -6,7 +6,7 @@
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/19 08:03:01 by chemelin          #+#    #+#             */
-/*   Updated: 2021/02/07 18:44:19 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/11 19:04:13 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -771,6 +771,7 @@ TEST : test %-12i et %--2.4s %24s !\n, 0, NULL, "coco"
 	ft_printf("09) my       PRINTF : |%-5c|\n", '\0');
 	printf("10) standart PRINTF : |%1c|\n", '\0');
 	ft_printf("10} my       PRINTF : |%1c|\n", '\0');
+	
 	ft_printf("--------------------%%s--------------------\n");
 	printf("01) standart PRINTF : |%s|\n", "salut");
 	ft_printf("01) my       PRINTF : |%s|\n", "salut");

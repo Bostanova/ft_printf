@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eerika <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 19:31:25 by eerika            #+#    #+#             */
-/*   Updated: 2020/11/26 23:07:32 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/10 12:11:34 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//освободить при помощи free память во всех файлах
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	len;
-	char *res;
+	int		i;
+	int		len;
+	char	*res;
 
 	if (!s1 || !set)
 		return (NULL);
@@ -31,12 +30,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		len--;
 	res = ft_substr((char *)s1, i, len - i + 1);
 	return (res);
-}
-
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-    printf("%s\n", ft_strtrim("jjfhjvfjdkj", "jk"));
-    return 0;
 }

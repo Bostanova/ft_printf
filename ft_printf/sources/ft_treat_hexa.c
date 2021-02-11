@@ -6,7 +6,7 @@
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 19:04:58 by eerika            #+#    #+#             */
-/*   Updated: 2021/02/07 18:02:19 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/11 20:25:36 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int		ft_in_put_part_hexa(char *hexa, t_flags flags)
 
 	char_count = 0;
 	if (flags.dot >= 0)
-		char_count += ft_treat_width(flags.dot - 1, ft_strlen(hexa) - 1, 1);
+		char_count += ft_width(flags.dot - 1, ft_strlen(hexa) - 1, 1);
 	char_count += ft_putstrprec(hexa, ft_strlen(hexa));
 	return (char_count);
 }
@@ -35,10 +35,10 @@ static int		ft_put_part_hexa(char *hexa, t_flags flags)
 	if (flags.dot >= 0)
 	{
 		flags.width -= flags.dot;
-		char_count += ft_treat_width(flags.width, 0, 0);
+		char_count += ft_width(flags.width, 0, 0);
 	}
 	else
-		char_count += ft_treat_width(flags.width,
+		char_count += ft_width(flags.width,
 		ft_strlen(hexa), flags.zero);
 	if (flags.minus == 0)
 		char_count += ft_in_put_part_hexa(hexa, flags);
@@ -55,7 +55,7 @@ int				ft_treat_hexa(unsigned int ui, int lower, t_flags flags)
 				+ ui);
 	if (flags.dot == 0 && ui == 0)
 	{
-		char_count += ft_treat_width(flags.width, 0, 0);
+		char_count += ft_width(flags.width, 0, 0);
 		return (char_count);
 	}
 	hexa = ft_ull_base((unsigned long long)ui, 16);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eerika <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 19:31:52 by eerika            #+#    #+#             */
-/*   Updated: 2020/11/26 23:19:50 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/10 12:10:09 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,3 @@ char	**ft_split(char	const *s, char c)
 	splitted = fill(s, words, c, splitted);
 	return (splitted);
 }
-
-int main()
-{
-	char b = 'b';
-  ft_split("abcabcabc", b);
-  return 0;
-  }
