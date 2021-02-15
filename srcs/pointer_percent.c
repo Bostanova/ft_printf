@@ -36,8 +36,14 @@ int			pointer_handling(unsigned long long ptr, t_flags flags)
 	count = 0;
 	if (ptr == 0 && flags.dot == 0)
 	{
-		count += print_str("0x", 2);
-		return (count += print_width(flags.width, 0, 1));
+		count = print_width(flags.width - 1, 1, 0);
+		count += 2;
+		ft_putchar('0');
+		ft_putchar('x');
+		return (count);
+
+		// count += print_str("0x", 2);
+		// return (count += print_width(flags.width, 0, 1));
 	}
 	pointer = num_to_hex(ptr, 0);
 	pointer = ft_str_tolower(pointer);

@@ -34,6 +34,7 @@ t_flags		flag_width(va_list ap, t_flags flags)
 	if (flags.width < 0)
 	{
 		flags.minus = 1;
+		flags.zero = 0;
 		flags.width *= -1;
 	}
 	return (flags);
@@ -46,12 +47,17 @@ int			flag_dot(const char *format, int i, t_flags *flags, va_list ap)
 	{
 		flags->dot = va_arg(ap, int);
 		i++;
+		if (flags->dot >= 0)
+			flags->zero = 0;
+		else
+			flags->dot = -1;
 	}
 	else
 	{
 		flags->dot = 0;
 		while (ft_isdigit(format[i]))
 			flags->dot = (flags->dot * 10) + (format[i++] - '0');
+		flags->zero = 0;
 	}
 	return (i);
 }
