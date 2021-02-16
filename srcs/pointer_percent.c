@@ -6,7 +6,7 @@
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 10:57:18 by eerika            #+#    #+#             */
-/*   Updated: 2021/02/15 13:29:47 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/16 09:48:30 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,6 @@ int			pointer_handling(unsigned long long ptr, t_flags flags)
 		ft_putchar('0');
 		ft_putchar('x');
 		return (count);
-
-		// count += print_str("0x", 2);
-		// return (count += print_width(flags.width, 0, 1));
 	}
 	pointer = num_to_hex(ptr, 0);
 	pointer = ft_str_tolower(pointer);

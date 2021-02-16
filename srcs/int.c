@@ -6,7 +6,7 @@
 /*   By: eerika <eerika@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 10:56:01 by eerika            #+#    #+#             */
-/*   Updated: 2021/02/15 20:15:49 by eerika           ###   ########.fr       */
+/*   Updated: 2021/02/16 09:47:53 by eerika           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	dotflag_handling(char *str_from_int, int save_i, t_flags flags)
 	int count;
 
 	count = 0;
-	if (save_i < 0 && flags.dot >= 0 )
+	if (save_i < 0 && flags.dot >= 0)
 		ft_putchar('-');
 	if (flags.dot >= 0)
 		count += print_width(flags.dot - 1, ft_strlen(str_from_int) - 1, 1);
@@ -62,7 +62,7 @@ int			int_handling_normal(int i, t_flags flags)
 	if (i < 0 && (flags.dot >= 0 || flags.zero == 1))
 	{
 		if (flags.zero == 1 && flags.dot == -1)
-				print_str("-", 1);
+			print_str("-", 1);
 		i *= -1;
 		flags.width -= 1;
 		count++;
